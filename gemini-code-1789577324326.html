@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuestionario Interactivo - Repaso de Examen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+        .question-card {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            background-color: #fafbfc;
+        }
+        .question-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #34495e;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            background: #fff;
+            border: 1px solid #ccd1d9;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .options label:hover {
+            background-color: #ebf5fb;
+            border-color: #3498db;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #1f618d;
+        }
+        #results {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 6px;
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .correct {
+            color: #27ae60;
+            background-color: #e8f8f5;
+            border: 1px solid #a3e4d7;
+        }
+        .incorrect {
+            color: #c0392b;
+            background-color: #f5b7b1;
+            border: 1px solid #f1948a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Simulador de Examen: Repaso Ampliado</h1>
+    
+    <form id="quizForm">
+        
+        <!-- Pregunta 1 -->
+        <div class="question-card">
+            <div class="question-title">1. (Ética y TIC) ¿Cómo se relaciona el concepto de "panóptico digital" con la privacidad y el control?</div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> A) Las corporaciones vigilan obligatoriamente sin que el usuario se entere.</label>
+                <label><input type="radio" name="q1" value="b"> B) El usuario se autovigila y entrega sus datos de forma voluntaria a las corporaciones creyéndose libre.</label>
+                <label><input type="radio" name="q1" value="c"> C) Los gobiernos prohíben el uso de redes sociales para proteger los datos.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question-card">
+            <div class="question-title">2. (Ética y Deontología) ¿Qué diferencia principal existe entre cumplir un código deontológico y aspirar a la ética profesional?</div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> A) La deontología es lo obligatorio y de base; la ética es el horizonte aspiracional de perfección y plenitud.</label>
+                <label><input type="radio" name="q2" value="b"> B) La ética profesional está escrita en códigos legales y la deontología no.</label>
+                <label><input type="radio" name="q2" value="c"> C) No hay diferencias, ambos términos significan exactamente lo mismo.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question-card">
+            <div class="question-title">3. (Ley 7.642 - Córdoba) Según el Artículo 4 de la ley, ¿qué comprende el ejercicio de la profesión?</div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> A) Únicamente la firma de planos y proyectos informáticos finalizados.</label>
+                <label><input type="radio" name="q3" value="b"> B) Solo el cobro de honorarios por un servicio de asesoría técnica.</label>
+                <label><input type="radio" name="q3" value="c"> C) Desde la promoción u ofrecimiento de servicios hasta la aplicación y cierre de negocios.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question-card">
+            <div class="question-title">4. (Ética y TIC) ¿Qué plantea el problema de las "muchas manos" en sistemas informáticos complejos?</div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> A) Que se requiere mucha gente para reparar un error de hardware.</label>
+                <label><input type="radio" name="q4" value="b"> B) Que al intervenir múltiples áreas y personas, la atribución de responsabilidad moral se diluye y dificulta.</label>
+                <label><input type="radio" name="q4" value="c"> C) Que los programadores siempre trabajan en equipo bajo una misma directiva directa.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question-card">
+            <div class="question-title">5. (Ética y Deontología) ¿Qué riesgo conlleva una especialización técnica excesiva sin vocación profesional?</div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> A) Convertirse en un técnico ciego a las consecuencias sociales de su labor, sujeto acríticamente a intereses corporativos.</label>
+                <label><input type="radio" name="q5" value="b"> B) Perder la capacidad de programar en lenguajes modernos.</label>
+                <label><input type="radio" name="q5" value="c"> C) No poder cobrar honorarios matriculados legalmente.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question-card">
+            <div class="question-title">6. (Ley 7.642 - Córdoba) Además del título profesional, ¿qué condición es indispensable para la habilitación legal en la provincia?</div>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> A) Tener al menos cinco años de experiencia laboral comprobable.</label>
+                <label><input type="radio" name="q6" value="b"> B) Estar inscrito y matriculado en el Consejo Profesional de Ciencias Informáticas.</label>
+                <label><input type="radio" name="q6" value="c"> C) Aprobar un examen de suficiencia de inglés técnico y redes.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 7 (Nueva 1) -->
+        <div class="question-card">
+            <div class="question-title">7. (Ética y TIC) En el desarrollo de software, ¿cómo se aborda el dilema ético cuando un sistema automatizado toma decisiones críticas sin intervención humana?</div>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> A) Se exime a los desarrolladores de culpa porque el algoritmo es autónomo.</label>
+                <label><input type="radio" name="q7" value="b"> B) La responsabilidad moral recae en quienes diseñaron, programaron y desplegaron el sistema, debido al impacto directo sobre los usuarios.</label>
+                <label><input type="radio" name="q7" value="c"> C) Ninguna de las anteriores es correcta.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 8 (Nueva 2) -->
+        <div class="question-card">
+            <div class="question-title">8. (Ética y Deontología) ¿Qué diferencia conceptual existe entre una sanción ética y una sanción legal institucional?</div>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> A) La sanción ética proviene de la violación al código deontológico del colectivo profesional, mientras que la legal puede implicar inhabilitación o penalidades reguladas por el colegio o la justicia.</label>
+                <label><input type="radio" name="q8" value="b"> B) No existe ninguna diferencia jurídica ni práctica.</label>
+                <label><input type="radio" name="q8" value="c"> C) Las faltas éticas nunca conllevan consecuencias profesionales.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 9 (Nueva 3) -->
+        <div class="question-card">
+            <div class="question-title">9. (Ley 7.642 - Córdoba) Conforme al Artículo 4 de la ley, ¿por qué la obligatoriedad de la matrícula rige desde la promoción del servicio y no solo al facturar?</div>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> A) Porque el ejercicio profesional abarca todo acto que implique ofrecimiento, publicidad o gestión previa al cierre de negocios informáticos.</label>
+                <label><input type="radio" name="q9" value="b"> B) Es un error de la ley; solo es obligatorio al momento de cobrar.</label>
+                <label><input type="radio" name="q9" value="c"> C) Solo aplica si se usan logotipos del Consejo en las publicidades.</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="calcularResultado()">Calificar Respuestas</button>
+    </form>
+
+    <div id="results"></div>
+</div>
+
+<script>
+function calcularResultado() {
+    const respuestasCorrectas = {
+        q1: 'b',
+        q2: 'a',
+        q3: 'c',
+        q4: 'b',
+        q5: 'a',
+        q6: 'b',
+        q7: 'b',
+        q8: 'a',
+        q9: 'a'
+    };
+
+    let aciertos = 0;
+    let total = Object.keys(respuestasCorrectas).length;
+    let respondidas = 0;
+
+    for (let key in respuestasCorrectas) {
+        const seleccionada = document.querySelector(`input[name="${key}"]:checked`);
+        if (seleccionada) {
+            respondidas++;
+            if (seleccionada.value === respuestasCorrectas[key]) {
+                aciertos++;
+            }
+        }
+    }
+
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.style.display = 'block';
+
+    if (respondidas < total) {
+        resultsDiv.className = 'results incorrect';
+        resultsDiv.innerHTML = `¡Atención! Respondiste ${respondidas} de ${total} preguntas. Completá todas para una evaluación precisa. Obteniste ${aciertos} aciertos parciales.`;
+    } else if (aciertos === total) {
+        resultsDiv.className = 'results correct';
+        resultsDiv.innerHTML = `¡Excelente, Santiago! 🏆 Contestaste las ${total} preguntas correctamente. ¡Estás más que preparado para el examen!`;
+    } else {
+        resultsDiv.className = 'results incorrect';
+        resultsDiv.innerHTML = `Obtuviste ${aciertos} de ${total} respuestas correctas. ¡Muy bien el intento, revisá los conceptos marcados y vas directo al 10!`;
+    }
+}
+</script>
+
+</body>
+</html>
